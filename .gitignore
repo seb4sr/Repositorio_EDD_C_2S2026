@@ -1,0 +1,14 @@
+# Build artifacts
+build/
+cmake-build-*/
+
+# IDE files
+.vscode/
+.idea/
+
+# Auxiliary learning guides
+GuiasAux/
+
+# OS files
+Thumbs.db
+.DS_Store
