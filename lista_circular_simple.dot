@@ -1,0 +1,10 @@
+digraph ListaCircularSimple {
+    rankdir=LR;
+    node [shape=record, style=filled, fillcolor="#eaff06"];
+    nodo0 [label="{Juan | 12 anios}"];
+    nodo1 [label="{Pedro | 35 anios}"];
+    nodo2 [label="{Ana | 28 anios}"];
+    nodo0 -> nodo1;
+    nodo1 -> nodo2;
+    nodo2 -> nodo0;
+}
