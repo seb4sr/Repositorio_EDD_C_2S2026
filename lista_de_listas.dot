@@ -1,0 +1,63 @@
+digraph ListaDeListas {
+    rankdir=TB;
+    node [shape=record, style=filled, fillcolor="#eaff06"];
+    subgraph cluster_0 {
+        label="g1";
+        style=filled;
+        color="#dddddd";
+        grupo0 [shape=ellipse, style=filled, fillcolor="#9ad0f5", label="g1"];
+        g0n0 [label="{Ana | 20 anios}"];
+        grupo0 -> g0n0;
+        g0n1 [label="{Luis | 22 anios}"];
+        g0n0 -> g0n1;
+        g0n2 [label="{Marta | 19 anios}"];
+        g0n1 -> g0n2;
+        g0n3 [label="{Carlos | 25 anios}"];
+        g0n2 -> g0n3;
+    }
+    subgraph cluster_1 {
+        label="g2";
+        style=filled;
+        color="#dddddd";
+        grupo1 [shape=ellipse, style=filled, fillcolor="#9ad0f5", label="g2"];
+        g1n0 [label="{Sofia | 21 anios}"];
+        grupo1 -> g1n0;
+        g1n1 [label="{Diego | 23 anios}"];
+        g1n0 -> g1n1;
+        g1n2 [label="{Valentina | 20 anios}"];
+        g1n1 -> g1n2;
+        g1n3 [label="{Andres | 24 anios}"];
+        g1n2 -> g1n3;
+        g1n4 [label="{Camila | 22 anios}"];
+        g1n3 -> g1n4;
+        g1n5 [label="{Javier | 26 anios}"];
+        g1n4 -> g1n5;
+        g1n6 [label="{Paola | 19 anios}"];
+        g1n5 -> g1n6;
+    }
+    subgraph cluster_2 {
+        label="g4";
+        style=filled;
+        color="#dddddd";
+        grupo2 [shape=ellipse, style=filled, fillcolor="#9ad0f5", label="g4"];
+        g2n0 [label="{Ricardo | 27 anios}"];
+        grupo2 -> g2n0;
+        g2n1 [label="{Daniela | 20 anios}"];
+        g2n0 -> g2n1;
+        g2n2 [label="{Fernando | 23 anios}"];
+        g2n1 -> g2n2;
+        g2n3 [label="{Gabriela | 21 anios}"];
+        g2n2 -> g2n3;
+        g2n4 [label="{Hector | 25 anios}"];
+        g2n3 -> g2n4;
+        g2n5 [label="{Isabel | 19 anios}"];
+        g2n4 -> g2n5;
+        g2n6 [label="{Jorge | 24 anios}"];
+        g2n5 -> g2n6;
+        g2n7 [label="{Karla | 22 anios}"];
+        g2n6 -> g2n7;
+    }
+    { rank=same; grupo0; grupo1; grupo2; }
+    grupo0 -> grupo1 [style=dashed, color=red, constraint=false];
+    grupo1 -> grupo2 [style=dashed, color=red, constraint=false];
+}
