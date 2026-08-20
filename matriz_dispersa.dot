@@ -1,0 +1,66 @@
+digraph MatrizDispersa {
+    labelloc="t";
+    fontsize=16;
+    nodesep=0.6;
+    ranksep=0.7;
+    node [shape=box, style=filled, fontname="Arial", fontsize=11];
+
+    origen [label="fila / columna", shape=ellipse, fillcolor="#dddddd", fontsize=10];
+
+    cab_col_0 [label="Col 0", group=1, fillcolor="#2980b9", fontcolor=white];
+    cab_col_1 [label="Col 1", group=2, fillcolor="#2980b9", fontcolor=white];
+    cab_col_2 [label="Col 2", group=3, fillcolor="#2980b9", fontcolor=white];
+    cab_col_3 [label="Col 3", group=4, fillcolor="#2980b9", fontcolor=white];
+    cab_col_4 [label="Col 4", group=5, fillcolor="#2980b9", fontcolor=white];
+    cab_col_5 [label="Col 5", group=6, fillcolor="#2980b9", fontcolor=white];
+
+    cab_fil_0 [label="Fil 0", group=0, fillcolor="#27ae60", fontcolor=white];
+    cab_fil_1 [label="Fil 1", group=0, fillcolor="#27ae60", fontcolor=white];
+    cab_fil_2 [label="Fil 2", group=0, fillcolor="#27ae60", fontcolor=white];
+    cab_fil_3 [label="Fil 3", group=0, fillcolor="#27ae60", fontcolor=white];
+    cab_fil_4 [label="Fil 4", group=0, fillcolor="#27ae60", fontcolor=white];
+    cab_fil_5 [label="Fil 5", group=0, fillcolor="#27ae60", fontcolor=white];
+
+    dato_0_0 [label="(0,0)\nval=5", group=1, fillcolor="#ecf0f1"];
+    dato_1_1 [label="(1,1)\nval=2", group=2, fillcolor="#ecf0f1"];
+    dato_2_4 [label="(2,4)\nval=7", group=5, fillcolor="#ecf0f1"];
+    dato_3_2 [label="(3,2)\nval=1", group=3, fillcolor="#ecf0f1"];
+    dato_4_4 [label="(4,4)\nval=9", group=5, fillcolor="#ecf0f1"];
+    dato_5_5 [label="(5,5)\nval=4", group=6, fillcolor="#ecf0f1"];
+
+    cab_fil_0 -> dato_0_0 [dir=both, color="#27ae60"];
+    cab_fil_1 -> dato_1_1 [dir=both, color="#27ae60"];
+    cab_fil_2 -> dato_2_4 [dir=both, color="#27ae60"];
+    cab_fil_3 -> dato_3_2 [dir=both, color="#27ae60"];
+    cab_fil_4 -> dato_4_4 [dir=both, color="#27ae60"];
+    cab_fil_5 -> dato_5_5 [dir=both, color="#27ae60"];
+
+    cab_col_0 -> dato_0_0 [dir=both, color="#2980b9"];
+    cab_col_1 -> dato_1_1 [dir=both, color="#2980b9"];
+    cab_col_2 -> dato_3_2 [dir=both, color="#2980b9"];
+    cab_col_4 -> dato_2_4 [dir=both, color="#2980b9"];
+    dato_2_4 -> dato_4_4 [dir=both, color="#2980b9"];
+    cab_col_5 -> dato_5_5 [dir=both, color="#2980b9"];
+
+    { rank=same; origen; cab_col_0; cab_col_1; cab_col_2; cab_col_3; cab_col_4; cab_col_5; }
+    { rank=same; cab_fil_0; dato_0_0; }
+    { rank=same; cab_fil_1; dato_1_1; }
+    { rank=same; cab_fil_2; dato_2_4; }
+    { rank=same; cab_fil_3; dato_3_2; }
+    { rank=same; cab_fil_4; dato_4_4; }
+    { rank=same; cab_fil_5; dato_5_5; }
+
+    origen -> cab_col_0 [style=invis];
+    cab_col_0 -> cab_col_1 [style=invis];
+    cab_col_1 -> cab_col_2 [style=invis];
+    cab_col_2 -> cab_col_3 [style=invis];
+    cab_col_3 -> cab_col_4 [style=invis];
+    cab_col_4 -> cab_col_5 [style=invis];
+
+    origen -> cab_fil_0 [style=invis];
+    cab_fil_0 -> cab_fil_1 [style=invis];
+    cab_fil_1 -> cab_fil_2 [style=invis];
+    cab_fil_2 -> cab_fil_3 [style=invis];
+    cab_fil_3 -> cab_fil_4 [style=invis];
+    cab_fil_4 -> cab_fil_5 [style=invis];
+}

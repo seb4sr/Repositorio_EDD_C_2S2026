@@ -1,0 +1,14 @@
+digraph ArbolBST {
+    node [shape=record, style=filled, fillcolor="#9ad0f5"];
+    n0 [label="{Sofia | 21 anios}"];
+    n1 [label="{Marta | 19 anios}"];
+    n2 [label="{Javier | 8 anios}"];
+    n1 -> n2 [label="I"];
+    n0 -> n1 [label="I"];
+    n3 [label="{Luis | 22 anios}"];
+    n4 [label="{Carlos | 25 anios}"];
+    n5 [label="{Valentina | 24 anios}"];
+    n4 -> n5 [label="I"];
+    n3 -> n4 [label="D"];
+    n0 -> n3 [label="D"];
+}
