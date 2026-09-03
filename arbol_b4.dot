@@ -1,0 +1,20 @@
+digraph ArbolB4 {
+    node [shape=record, style=filled, fillcolor="#9ad0f5"];
+    n0 [label="<p0> | Carlos,40 | <p1>"];
+    n1 [label="<p0> | Luis,20 | <p1>"];
+    n2 [label="Ana,10"];
+    n1:p0 -> n2;
+    n3 [label="Marta,30"];
+    n1:p1 -> n3;
+    n0:p0 -> n1;
+    n4 [label="<p0> | Diego,60 | <p1> | Javier,80 | <p2> | Andres,100 | <p3>"];
+    n5 [label="Sofia,50"];
+    n4:p0 -> n5;
+    n6 [label="Valentina,70"];
+    n4:p1 -> n6;
+    n7 [label="Camila,90"];
+    n4:p2 -> n7;
+    n8 [label="Paola,110 | Ricardo,120"];
+    n4:p3 -> n8;
+    n0:p1 -> n4;
+}
