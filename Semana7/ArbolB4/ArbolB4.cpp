@@ -150,6 +150,7 @@ bool ArbolB4::buscar(int edad) const {
 ArbolB4::Nodo* ArbolB4::obtenerMaximoNodo(Nodo* nodo) const {
     while (!nodo->esHoja) {
         nodo = nodo->hijos[nodo->cantidadClaves];
+                                                 
     }
     return nodo;
 }
@@ -184,6 +185,7 @@ void ArbolB4::prestarDeIzquierda(Nodo* nodo, int indice) {
 
     nodo->edades[indice - 1] = hermanoIzq->edades[hermanoIzq->cantidadClaves - 1];
     nodo->nombres[indice - 1] = hermanoIzq->nombres[hermanoIzq->cantidadClaves - 1];
+    
 
     ++hijo->cantidadClaves;
     --hermanoIzq->cantidadClaves;
