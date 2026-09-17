@@ -1,0 +1,26 @@
+digraph TablaHash {
+    rankdir=LR;
+    splines=ortho;
+    node [shape=record, style=filled, fontname="Courier", fontsize=10];
+    edge [arrowhead=vee, fontname="Arial", fontsize=9];
+
+    titulo [label="Tabla Hash\nSize=3 | Total=4 | Colisiones=1 | FC=1.33", shape=box, fillcolor="#EAECEE", fontsize=12];
+
+    bucket_0 [label="{bucket[0] | TIPO-01 | 2 nodo(s)}", fillcolor="#D5D8DC"];
+    bucket_1 [label="{bucket[1] | TIPO-02 | 1 nodo(s)}", fillcolor="#D5D8DC"];
+    bucket_2 [label="{bucket[2] | TIPO-03 | 1 nodo(s)}", fillcolor="#D5D8DC"];
+    nodo_0_0 [label="{COL-10245\nAna Ramirez\nDEP-MED | TIPO-01}", fillcolor="#AED6F1"];
+    nodo_0_1 [label="{COL-40210\nPedro Alvarado\nDEP-LAB | TIPO-04}", fillcolor="#AED6F1"];
+    bucket_0 -> nodo_0_0;
+    nodo_0_0 -> nodo_0_1;
+    null_0 [label="NULL", fillcolor="#FADBD8"];
+    nodo_0_1 -> null_0;
+    nodo_1_0 [label="{COL-20134\nCarlos Mendoza\nDEP-CIR | TIPO-02}", fillcolor="#FAD7A0"];
+    bucket_1 -> nodo_1_0;
+    null_1 [label="NULL", fillcolor="#FADBD8"];
+    nodo_1_0 -> null_1;
+    nodo_2_0 [label="{COL-30101\nLucia Flores\nDEP-MED | TIPO-03}", fillcolor="#A9DFBF"];
+    bucket_2 -> nodo_2_0;
+    null_2 [label="NULL", fillcolor="#FADBD8"];
+    nodo_2_0 -> null_2;
+}
