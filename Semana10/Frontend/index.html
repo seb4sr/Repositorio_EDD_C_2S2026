@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Semana 10 - Frontend</title>
+</head>
+<body>
+    <h1>Frontend</h1>
+    <button id="boton">Pedir saludo al backend</button>
+    <p id="respuesta"></p>
+
+    <script>
+        const URL_BACKEND = "http://localhost:8080/api/saludo";
+
+        document.getElementById("boton").addEventListener("click", async () => {
+            try {
+                const respuesta = await fetch(URL_BACKEND);
+                const datos = await respuesta.json();
+                document.getElementById("respuesta").textContent = datos.mensaje;
+            } catch (error) {
+                document.getElementById("respuesta").textContent =
+                    "No se pudo conectar con el backend. ¿Está encendido?";
+            }
+        });
+    </script>
+</body>
+</html>
